@@ -11,6 +11,7 @@ class _SingInState extends State<SingIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffC6EAFF), //oxff, pengganti #
       body: Center(
           // padding: EdgeInsets.symmetric(horizontal: 30),
           child: Column(
@@ -19,44 +20,82 @@ class _SingInState extends State<SingIn> {
               // Column(
               //   children: [
                   Container(
-                    child: Text('LOGIN'),
+                    child: 
+                    Text(
+                      'LOGIN',
+                      style: TextStyle(
+                        fontSize: 48,
+                        fontWeight: FontWeight.bold
+                      ),),
                     ),
                   Container(
                     child: Image.asset("assets/logo.png"),
+                    width: 200,
+                    height: 200,
                   ),
                   Container(
-                    width: 200,
+                    width: 330,
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: 'email',
+                        focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.black)),
+                        filled: true,
+                        fillColor: Colors.white,
+                        hintText: 'Email',
                         border: OutlineInputBorder(borderSide: BorderSide(color: Colors.black))
                       ),
                     ),
                   ),
                   Container(
-                    width: 200,
+                    width: 330,
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: 'password',
+                        focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.black)),
+                        filled: true,
+                        fillColor: Colors.white,
+                        hintText: 'Password',
                         border: OutlineInputBorder(borderSide: BorderSide(color: Colors.black))
                       ),
                     ),
                   ),
-                  SizedBox(height: 10,),
+                  SizedBox(height: 20,),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        child: Text('Forget Password'),
+                        margin: EdgeInsets.only(left:30 ),
+                        child: Text(
+                          'Forget Password',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xff404CB2)
+                          ),
+                        ),
                       )
                     ],
                   ),
                   SizedBox(height: 20,),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                    ElevatedButton(onPressed:() {},child: Text("tes")),
-                    ElevatedButton(onPressed:() {},child: Text("tes")),
+                      Container(
+                        width: 160,
+                        child: ElevatedButton(onPressed:() {},
+                        style:ElevatedButton.styleFrom(
+                          primary: Color(0xff404CB2)
+                        ),
+                        child: Text("LOGIN")),
+                      ),
+                      SizedBox(width: 5 ,),
+                      Container(
+                        width: 160,
+                        child: ElevatedButton(onPressed:() {},
+                        style:ElevatedButton.styleFrom(
+                          primary: Color(0xff404CB2)
+                        ),
+                        child: Text("REGISTER")),
+                      ),
+                    // ElevatedButton(onPressed:() {},child: Text("tes")),
+                    // ElevatedButton(onPressed:() {},child: Text("tes")),
                   ],)
                 // ],
               // )
