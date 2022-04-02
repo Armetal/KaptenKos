@@ -1,15 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:latihan1/register_page.dart';
 import 'package:latihan1/menu_page.dart';
 
-class SingIn extends StatefulWidget {
-  const SingIn({Key? key}) : super(key: key);
-
-  @override
-  State<SingIn> createState() => _SingInState();
-}
-
-class _SingInState extends State<SingIn> {
+class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +15,7 @@ class _SingInState extends State<SingIn> {
             //   children: [
             Container(
               child: Text(
-                'LOGIN',
+                'REGISTER',
                 style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
               ),
             ),
@@ -31,6 +23,32 @@ class _SingInState extends State<SingIn> {
               child: Image.asset("assets/logo.png"),
               width: 200,
               height: 200,
+            ),
+            Container(
+              width: 330,
+              child: TextField(
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black)),
+                    filled: true,
+                    fillColor: Colors.white,
+                    hintText: 'First Name',
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black))),
+              ),
+            ),
+            Container(
+              width: 330,
+              child: TextField(
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black)),
+                    filled: true,
+                    fillColor: Colors.white,
+                    hintText: 'Last Name',
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black))),
+              ),
             ),
             Container(
               width: 330,
@@ -65,9 +83,9 @@ class _SingInState extends State<SingIn> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  margin: EdgeInsets.only(left: 30),
+                  margin: EdgeInsets.only(left: 100),
                   child: Text(
-                    'Forgot Password?',
+                    'Harap Isi Data Diri Dengan Benar',
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: Color(0xff404CB2)),
                   ),
@@ -84,14 +102,11 @@ class _SingInState extends State<SingIn> {
                   width: 160,
                   child: ElevatedButton(
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return MenuPage();
-                        }));
+                        Navigator.pop(context);
                       },
                       style: ElevatedButton.styleFrom(
-                          primary: Color.fromARGB(255, 0, 116, 35)),
-                      child: Text("LOGIN")),
+                          primary: Color.fromARGB(255, 8, 39, 97)),
+                      child: Text("Back To Login")),
                 ),
                 SizedBox(
                   width: 5,
@@ -102,7 +117,7 @@ class _SingInState extends State<SingIn> {
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return RegisterPage();
+                          return MenuPage();
                         }));
                       },
                       style:
