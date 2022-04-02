@@ -19,7 +19,7 @@ class MenuPage extends StatelessWidget {
             },
             style: ElevatedButton.styleFrom(
                 primary: Color.fromARGB(255, 5, 92, 92)),
-            child: Text("Setting")),
+            child: Icon(Icons.settings)),
         padding: EdgeInsets.all(5.0),
       ),
     );
