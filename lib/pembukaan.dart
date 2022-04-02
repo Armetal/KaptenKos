@@ -5,17 +5,15 @@ class pembukaan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xffC6EAFF),
+        backgroundColor: const Color(0xffC6EAFF),
         body: Center(
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Container(
-            child: Text(
-              'KaptenKos',
-              style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold),
-            ),
+          const Text(
+            'KaptenKos',
+            style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold),
           ),
-          Container(
+          SizedBox(
             child: Image.asset("assets/logo.png"),
             width: 300,
             height: 300,
@@ -26,13 +24,13 @@ class pembukaan extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) {
-                    return SingIn();
+                    return const SingIn();
                   }));
                 },
                 style: ElevatedButton.styleFrom(
-                    primary: Color.fromARGB(255, 5, 92, 92)),
-                child: Text("Next")),
-            padding: EdgeInsets.all(5.0),
+                    primary: const Color.fromARGB(255, 5, 92, 92)),
+                child: const Text("Next")),
+            padding: const EdgeInsets.all(5.0),
           )
         ])));
   }

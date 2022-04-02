@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:latihan1/pembukaan.dart';
-import 'package:latihan1/singin.dart';
 
 void main() {
   runApp(const MyApp());
