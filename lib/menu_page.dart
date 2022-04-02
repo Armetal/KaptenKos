@@ -12,8 +12,7 @@ class MenuPage extends StatelessWidget {
         width: 100,
         child: ElevatedButton(
             onPressed: () {
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
                 return Setting1();
               }));
             },
