@@ -73,7 +73,7 @@ class _SingInState extends State<SingIn> {
                       )
                     ],
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(height: 25,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
