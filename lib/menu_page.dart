@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:latihan1/settings.dart';
+import 'package:latihan1/statefull.dart';
 
 class MenuPage extends StatelessWidget {
   @override
@@ -13,7 +14,7 @@ class MenuPage extends StatelessWidget {
         child: ElevatedButton(
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return Setting1();
+                return CobaCount();
               }));
             },
             style: ElevatedButton.styleFrom(

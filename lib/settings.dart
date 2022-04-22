@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:latihan1/singin.dart';
 
 class Setting1 extends StatefulWidget {
   const Setting1({Key? key}) : super(key: key);
@@ -13,9 +14,21 @@ class SettingInState extends State<Setting1> {
     return Scaffold(
       backgroundColor: Color(0xffC6EAFF),
       appBar: AppBar(
-        title: Text('Settings'),
+        leading: BackButton(
+          color: Colors.black,
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (_) {
+              return SingIn();
+            }));
+          },
+        ),
+        title: Text(
+          'Settings',
+          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+        ),
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 22, 247, 123),
+        foregroundColor: Colors.black,
       ),
       body: Center(
         child: Column(
