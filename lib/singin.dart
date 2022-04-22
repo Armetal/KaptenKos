@@ -13,16 +13,13 @@ class _SingInState extends State<SingIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffC6EAFF), //oxff, pengganti #
+      backgroundColor: const Color(0xffC6EAFF),
       body: Center(
-        // padding: EdgeInsets.symmetric(horizontal: 30),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Column(
-            //   children: [
             Container(
-              child: Text(
+              child: const Text(
                 'LOGIN',
                 style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
               ),
@@ -34,7 +31,7 @@ class _SingInState extends State<SingIn> {
             ),
             Container(
               width: 330,
-              child: TextField(
+              child: const TextField(
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.black)),
@@ -47,7 +44,7 @@ class _SingInState extends State<SingIn> {
             ),
             Container(
               width: 330,
-              child: TextField(
+              child: const TextField(
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.black)),
@@ -58,15 +55,15 @@ class _SingInState extends State<SingIn> {
                         borderSide: BorderSide(color: Colors.black))),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  margin: EdgeInsets.only(left: 30),
-                  child: Text(
+                  margin: const EdgeInsets.only(left: 80),
+                  child: const Text(
                     'Forgot Password?',
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: Color(0xff404CB2)),
@@ -74,43 +71,41 @@ class _SingInState extends State<SingIn> {
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
+                SizedBox(
                   width: 160,
                   child: ElevatedButton(
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return MenuPage();
+                          return const MenuPage();
                         }));
                       },
                       style: ElevatedButton.styleFrom(
-                          primary: Color.fromARGB(255, 0, 116, 35)),
-                      child: Text("LOGIN")),
+                          primary: const Color.fromARGB(255, 0, 116, 35)),
+                      child: const Text("LOGIN")),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 5,
                 ),
-                Container(
+                SizedBox(
                   width: 160,
                   child: ElevatedButton(
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return RegisterPage();
+                          return const RegisterPage();
                         }));
                       },
-                      style:
-                          ElevatedButton.styleFrom(primary: Color(0xff404CB2)),
-                      child: Text("REGISTER")),
+                      style: ElevatedButton.styleFrom(
+                          primary: const Color(0xff404CB2)),
+                      child: const Text("REGISTER")),
                 ),
-                // ElevatedButton(onPressed:() {},child: Text("tes")),
-                // ElevatedButton(onPressed:() {},child: Text("tes")),
               ],
             )
             // ],

@@ -2,29 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:latihan1/menu_page.dart';
 
 class RegisterPage extends StatelessWidget {
+  const RegisterPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffC6EAFF), //oxff, pengganti #
+      backgroundColor: const Color(0xffC6EAFF),
       body: Center(
-        // padding: EdgeInsets.symmetric(horizontal: 30),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Column(
-            //   children: [
             Container(
-              child: Text(
+              child: const Text(
                 'REGISTER',
                 style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
               ),
             ),
-            Container(
+            SizedBox(
               child: Image.asset("assets/logo.png"),
               width: 200,
               height: 200,
             ),
-            Container(
+            const SizedBox(
               width: 330,
               child: TextField(
                 decoration: InputDecoration(
@@ -37,7 +36,7 @@ class RegisterPage extends StatelessWidget {
                         borderSide: BorderSide(color: Colors.black))),
               ),
             ),
-            Container(
+            const SizedBox(
               width: 330,
               child: TextField(
                 decoration: InputDecoration(
@@ -50,7 +49,7 @@ class RegisterPage extends StatelessWidget {
                         borderSide: BorderSide(color: Colors.black))),
               ),
             ),
-            Container(
+            const SizedBox(
               width: 330,
               child: TextField(
                 decoration: InputDecoration(
@@ -63,7 +62,7 @@ class RegisterPage extends StatelessWidget {
                         borderSide: BorderSide(color: Colors.black))),
               ),
             ),
-            Container(
+            const SizedBox(
               width: 330,
               child: TextField(
                 decoration: InputDecoration(
@@ -76,15 +75,15 @@ class RegisterPage extends StatelessWidget {
                         borderSide: BorderSide(color: Colors.black))),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  margin: EdgeInsets.only(left: 100),
-                  child: Text(
+                  margin: const EdgeInsets.only(left: 100),
+                  child: const Text(
                     'Harap Isi Data Diri Dengan Benar',
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: Color(0xff404CB2)),
@@ -92,44 +91,40 @@ class RegisterPage extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
+                SizedBox(
                   width: 160,
                   child: ElevatedButton(
                       onPressed: () {
                         Navigator.pop(context);
                       },
                       style: ElevatedButton.styleFrom(
-                          primary: Color.fromARGB(255, 8, 39, 97)),
-                      child: Text("Back To Login")),
+                          primary: const Color.fromARGB(255, 8, 39, 97)),
+                      child: const Text("Back To Login")),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 5,
                 ),
-                Container(
+                SizedBox(
                   width: 160,
                   child: ElevatedButton(
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return MenuPage();
+                          return const MenuPage();
                         }));
                       },
-                      style:
-                          ElevatedButton.styleFrom(primary: Color(0xff404CB2)),
-                      child: Text("REGISTER")),
+                      style: ElevatedButton.styleFrom(
+                          primary: const Color(0xff404CB2)),
+                      child: const Text("REGISTER")),
                 ),
-                // ElevatedButton(onPressed:() {},child: Text("tes")),
-                // ElevatedButton(onPressed:() {},child: Text("tes")),
               ],
             )
-            // ],
-            // )
           ],
         ),
       ),

@@ -12,8 +12,9 @@ class SettingInState extends State<Setting1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffC6EAFF),
+      backgroundColor: const Color(0xffC6EAFF),
       appBar: AppBar(
+<<<<<<< HEAD
         leading: BackButton(
           color: Colors.black,
           onPressed: () {
@@ -29,11 +30,16 @@ class SettingInState extends State<Setting1> {
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 22, 247, 123),
         foregroundColor: Colors.black,
+=======
+        title: const Text('Settings'),
+        centerTitle: true,
+        backgroundColor: const Color.fromARGB(255, 51, 137, 187),
+>>>>>>> 6378f62c0b7dd5605f9af958b13407deee32b9fb
       ),
       body: Center(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
@@ -44,14 +50,14 @@ class SettingInState extends State<Setting1> {
                   )),
               width: 250,
               height: 35,
-              child: Center(
+              child: const Center(
                 child: Text(
                   'Change Password',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Container(
@@ -62,14 +68,14 @@ class SettingInState extends State<Setting1> {
                   )),
               width: 250,
               height: 35,
-              child: Center(
+              child: const Center(
                 child: Text(
                   'Logout',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             Container(
@@ -81,7 +87,7 @@ class SettingInState extends State<Setting1> {
                   )),
               width: 250,
               height: 35,
-              child: Center(
+              child: const Center(
                 child: Text(
                   'Delete Account',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),

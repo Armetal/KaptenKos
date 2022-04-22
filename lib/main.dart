@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:latihan1/pembukaan.dart';
+<<<<<<< HEAD
 import 'package:latihan1/singin.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+=======
+>>>>>>> 6378f62c0b7dd5605f9af958b13407deee32b9fb
 
 void main() {
   runApp(const MyApp());
