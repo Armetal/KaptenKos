@@ -30,10 +30,24 @@ class ContohKosan extends StatelessWidget {
                   height: 500,
                   fit: BoxFit.fitWidth,
                 ),
+                DataTable(
+                  columns: const [
+                    DataColumn(label: Text('Nama Kos')),
+                    DataColumn(label: Text('Status')),
+                    DataColumn(label: Text('Alamat'))
+                  ],
+                  rows: const [
+                    DataRow(cells: [
+                      DataCell(Text('Kosan Bapak Ujang')),
+                      DataCell(Text('Tersedia')),
+                      DataCell(Text('Jl. Disini kumenunggumu no.3'))
+                    ])
+                  ],
+                ),
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
-                    '''Contoh Kosan''',
+                    '''Deskiripsi Kosan''',
                     textAlign: TextAlign.justify,
                   ),
                 )
