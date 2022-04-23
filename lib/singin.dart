@@ -62,7 +62,7 @@ class _SingInState extends State<SingIn> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  margin: const EdgeInsets.only(left: 80),
+                  margin: const EdgeInsets.only(left: 30),
                   child: const Text(
                     'Forgot Password?',
                     style: TextStyle(
