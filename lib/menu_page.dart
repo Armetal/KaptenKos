@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:latihan1/chat.dart';
+import 'package:latihan1/home.dart';
+import 'package:latihan1/payment.dart';
+import 'package:latihan1/profile.dart';
 import 'package:latihan1/search.dart';
 import 'package:latihan1/settings.dart';
 
@@ -14,23 +18,11 @@ class _MenuPage extends State<MenuPage> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Home',
-      style: optionStyle,
-    ),
+    HomePage(),
     Search(),
-    Text(
-      'Chat',
-      style: optionStyle,
-    ),
-    Text(
-      'Payment',
-      style: optionStyle,
-    ),
-    Text(
-      'Profile',
-      style: optionStyle,
-    ),
+    Chat(),
+    Payment(),
+    Profile(),
   ];
 
   void _onItemTapped(int index) {
