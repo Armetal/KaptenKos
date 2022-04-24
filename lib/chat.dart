@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:latihan1/chat_view.dart';
 import 'package:latihan1/menu_page.dart';
 
-//belum dipake
 class Chat extends StatelessWidget {
   const Chat({Key? key}) : super(key: key);
   @override

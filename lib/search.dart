@@ -9,6 +9,7 @@ class Search extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+          backgroundColor: const Color(0xffC6EAFF),
           appBar: AppBar(
             title: const Text("Daftar Kosan"),
             centerTitle: true,
@@ -21,6 +22,7 @@ class Search extends StatelessWidget {
               ),
               Card(
                 child: ListTile(
+                  tileColor: const Color.fromARGB(255, 186, 221, 241),
                   title: const Text("Contoh Kosan"),
                   leading: Image.asset(
                     'assets/contoh-kosan.jpeg',
@@ -39,6 +41,7 @@ class Search extends StatelessWidget {
               ),
               Card(
                 child: ListTile(
+                  tileColor: const Color.fromARGB(255, 186, 221, 241),
                   title: const Text("Contoh Kosan"),
                   leading: Image.asset(
                     'assets/contoh-kosan.jpeg',
@@ -57,6 +60,7 @@ class Search extends StatelessWidget {
               ),
               Card(
                 child: ListTile(
+                  tileColor: const Color.fromARGB(255, 186, 221, 241),
                   title: const Text("Contoh Kosan"),
                   leading: Image.asset(
                     'assets/contoh-kosan.jpeg',
@@ -75,6 +79,7 @@ class Search extends StatelessWidget {
               ),
               Card(
                 child: ListTile(
+                  tileColor: const Color.fromARGB(255, 186, 221, 241),
                   title: const Text("Contoh Kosan"),
                   leading: Image.asset(
                     'assets/contoh-kosan.jpeg',
