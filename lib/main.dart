@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:latihan1/pembukaan.dart';
+import 'package:latihan1/singin.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 void main() {
   runApp(const MyApp());
