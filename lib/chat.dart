@@ -13,6 +13,7 @@ class Chat extends StatelessWidget {
             title: const Text("Chat"),
             centerTitle: true,
           ),
+          backgroundColor: const Color(0xffC6EAFF),
           body: ListView(
             children: [
               const SizedBox(
@@ -20,6 +21,7 @@ class Chat extends StatelessWidget {
               ),
               Card(
                 child: ListTile(
+                  tileColor: const Color.fromARGB(255, 186, 221, 241),
                   title: const Text("Bapak Kos"),
                   leading: Image.asset(
                     'assets/person.png',

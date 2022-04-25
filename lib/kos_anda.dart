@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:latihan1/menu_page.dart';
 import 'package:latihan1/search.dart';
 
-class ContohKosan extends StatelessWidget {
-  const ContohKosan({Key? key}) : super(key: key);
+class KosAnda extends StatelessWidget {
+  const KosAnda({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,7 +12,7 @@ class ContohKosan extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: Color.fromARGB(255, 98, 180, 247),
             elevation: 0,
-            title: const Text("Contoh Kosan"),
+            title: const Text("Kos Anda"),
             leading: IconButton(
               onPressed: () {
                 Navigator.pop(context);
@@ -79,7 +79,7 @@ class ContohKosan extends StatelessWidget {
                                 height: 5.0,
                               ),
                               Text(
-                                "Tersedia",
+                                "Anda Huni",
                                 style: TextStyle(
                                   fontSize: 15.0,
                                   color: Color.fromARGB(255, 73, 170, 214),

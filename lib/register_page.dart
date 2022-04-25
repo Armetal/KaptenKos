@@ -114,7 +114,7 @@ class RegisterPage extends StatelessWidget {
                   width: 160,
                   child: ElevatedButton(
                       onPressed: () {
-                        Navigator.push(context,
+                        Navigator.pushReplacement(context,
                             MaterialPageRoute(builder: (context) {
                           return const MenuPage();
                         }));

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:latihan1/change_password.dart';
+import 'package:latihan1/menu_page.dart';
+import 'package:latihan1/profile.dart';
 import 'package:latihan1/singin.dart';
 
 class Setting1 extends StatefulWidget {
@@ -17,39 +20,27 @@ class SettingInState extends State<Setting1> {
         leading: BackButton(
           color: Colors.black,
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (_) {
-              return SingIn();
-            }));
+            Navigator.pop(context);
           },
         ),
-        title: Text(
+        title: const Text(
           'Settings',
           style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
-        backgroundColor: Color.fromARGB(255, 22, 247, 123),
+        backgroundColor: const Color.fromARGB(255, 22, 165, 247),
         foregroundColor: Colors.black,
       ),
       body: Center(
         child: Column(
           children: [
-            const SizedBox(
-              height: 20,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                  color: Colors.lightBlue,
-                  border: Border.all(
-                    color: Colors.black,
-                  )),
-              width: 250,
-              height: 35,
-              child: const Center(
-                child: Text(
-                  'Change Password',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                ),
-              ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const ChangePw();
+                }));
+              },
+              child: const Text("Change Password"),
             ),
             const SizedBox(
               height: 10,

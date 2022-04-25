@@ -6,8 +6,43 @@ class Payment extends StatelessWidget {
   const Payment({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color(0xffC6EAFF),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Payment"),
+        centerTitle: true,
+      ),
+      backgroundColor: const Color(0xffC6EAFF),
+      body: Container(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 30.0, horizontal: 16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                "Tagihan Anda",
+                style: TextStyle(
+                    color: Colors.redAccent,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 28.0),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Text(
+                'Segera selesaikan pembayaran tagihan Anda dan usahakan tetap menggunakan bagian uang kost benar-benar pada tempatnya, yakni untuk melunasi tagihan bulanan kost',
+                style: TextStyle(
+                  fontSize: 22.0,
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.w300,
+                  color: Colors.black,
+                  letterSpacing: 2.0,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

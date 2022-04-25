@@ -20,6 +20,30 @@ class Search extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
+              SizedBox(
+                height: 50,
+                width: 10,
+                child: Card(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: "Search...",
+                      hintStyle: TextStyle(color: Colors.grey.shade600),
+                      prefixIcon: Icon(
+                        Icons.search,
+                        color: Colors.grey.shade600,
+                        size: 20,
+                      ),
+                      filled: true,
+                      fillColor: Colors.grey.shade100,
+                      contentPadding: const EdgeInsets.all(8),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          borderSide: const BorderSide(
+                              color: Color.fromARGB(255, 245, 245, 245))),
+                    ),
+                  ),
+                ),
+              ),
               Card(
                 child: ListTile(
                   tileColor: const Color.fromARGB(255, 186, 221, 241),
