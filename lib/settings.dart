@@ -14,7 +14,6 @@ class SettingInState extends State<Setting1> {
     return Scaffold(
       backgroundColor: const Color(0xffC6EAFF),
       appBar: AppBar(
-<<<<<<< HEAD
         leading: BackButton(
           color: Colors.black,
           onPressed: () {
@@ -30,11 +29,6 @@ class SettingInState extends State<Setting1> {
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 22, 247, 123),
         foregroundColor: Colors.black,
-=======
-        title: const Text('Settings'),
-        centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 51, 137, 187),
->>>>>>> 6378f62c0b7dd5605f9af958b13407deee32b9fb
       ),
       body: Center(
         child: Column(
