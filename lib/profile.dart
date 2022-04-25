@@ -4,7 +4,6 @@ import 'package:latihan1/menu_page.dart';
 import 'package:latihan1/settings.dart';
 import 'package:latihan1/change_password.dart';
 
-//belum dipake
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
   @override
