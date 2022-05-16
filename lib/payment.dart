@@ -2,14 +2,51 @@ import 'package:flutter/material.dart';
 import 'package:latihan1/menu_page.dart';
 
 //belum dipake
-class Payment extends StatelessWidget {
+class Payment extends StatefulWidget {
   const Payment({Key? key}) : super(key: key);
+
+  @override
+  State<Payment> createState() => _PaymentState();
+}
+
+class _PaymentState extends State<Payment> {
+  String data = "PAYMENT";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Payment"),
         centerTitle: true,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print("Telah diklik");
+          showDialog(
+              context: context,
+              builder: (context) {
+                return AlertDialog(
+                  title: Text("PAYMENT"),
+                  content: Text("Apakah anda yakin melakukan pembayaran ?"),
+                  actions: [
+                    FlatButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Text("No"),
+                    ),
+                    FlatButton(
+                      onPressed: () {
+                        setState(() {
+                          data = "SUKSES";
+                        });
+                      },
+                      child: Text("Yes"),
+                    ),
+                  ],
+                );
+              });
+        },
+        child: Icon(Icons.payment),
       ),
       backgroundColor: const Color(0xffC6EAFF),
       body: Container(
