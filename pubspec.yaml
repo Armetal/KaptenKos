@@ -30,10 +30,17 @@ dependencies:
   flutter:
     sdk: flutter
   curved_navigation_bar: ^1.0.3
+  google_maps_flutter: ^2.1.5
+  geolocator: ^8.2.1
+  #geocoding: ^2.0.4
+  location: ^4.4.0
+  image_picker: ^0.8.5+3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
+  #cupertino_icons: ^1.0.2
+  #geocoder: ^0.2.1
+  #intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:

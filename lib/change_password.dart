@@ -13,7 +13,7 @@ class _ChangePwState extends State<ChangePw> {
     return Scaffold(
       backgroundColor: const Color(0xffC6EAFF),
       appBar: AppBar(
-        title: Text("Change Password"),
+        title: const Text("Change Password"),
       ),
       body: Center(
         child: Column(
@@ -103,7 +103,7 @@ class _ChangePwState extends State<ChangePw> {
                     Navigator.pop(context);
                   },
                   style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(255, 4, 229, 45)),
+                      primary: const Color.fromARGB(255, 4, 229, 45)),
                   child: const Text("Save")),
             ),
           ],

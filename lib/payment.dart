@@ -18,13 +18,13 @@ class Payment extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
+            children: const <Widget>[
               Text(
                 "Tagihan Anda",
                 style: TextStyle(
                     color: Colors.redAccent,
                     fontStyle: FontStyle.normal,
-                    fontSize: 28.0),
+                    fontSize: 20.0),
               ),
               SizedBox(
                 height: 10.0,
@@ -32,7 +32,7 @@ class Payment extends StatelessWidget {
               Text(
                 'Segera selesaikan pembayaran tagihan Anda dan usahakan tetap menggunakan bagian uang kost benar-benar pada tempatnya, yakni untuk melunasi tagihan bulanan kost',
                 style: TextStyle(
-                  fontSize: 22.0,
+                  fontSize: 15.0,
                   fontStyle: FontStyle.italic,
                   fontWeight: FontWeight.w300,
                   color: Colors.black,
