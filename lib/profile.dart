@@ -3,6 +3,7 @@ import 'package:latihan1/kos_anda.dart';
 import 'package:latihan1/menu_page.dart';
 import 'package:latihan1/settings.dart';
 import 'package:latihan1/change_password.dart';
+import 'package:latihan1/top_up.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key? key}) : super(key: key);
@@ -192,6 +193,40 @@ class Profile extends StatelessWidget {
                     alignment: Alignment.center,
                     child: const Text(
                       "Kos Anda",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 26.0,
+                          fontWeight: FontWeight.w300),
+                    ),
+                  ),
+                )),
+          ),
+          SizedBox(
+            width: 300.00,
+            child: RaisedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const TopUp();
+                  }));
+                },
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(80.0)),
+                elevation: 0.0,
+                padding: const EdgeInsets.all(2.0),
+                child: Ink(
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                        begin: Alignment.centerRight,
+                        end: Alignment.centerLeft,
+                        colors: [Colors.blueAccent, Colors.blueAccent]),
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                  child: Container(
+                    constraints:
+                        const BoxConstraints(maxWidth: 300.0, minHeight: 50.0),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      "Top Up",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 26.0,
