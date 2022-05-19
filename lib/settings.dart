@@ -35,6 +35,7 @@ class SettingInState extends State<Setting1> {
       body: Center(
         child: Column(
           children: [
+            Padding(padding: EdgeInsets.all(2.0)),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {

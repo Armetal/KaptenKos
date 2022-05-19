@@ -21,7 +21,7 @@ class Chat extends StatelessWidget {
               ),
               Card(
                 child: ListTile(
-                  tileColor: const Color.fromARGB(255, 186, 221, 241),
+                  tileColor: const Color.fromARGB(255, 223, 242, 255),
                   title: const Text("Bapak Kos"),
                   leading: Image.asset(
                     'assets/person.png',

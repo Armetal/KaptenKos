@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:latihan1/register_page.dart';
 import 'package:latihan1/menu_page.dart';
+import 'package:email_validator/email_validator.dart';
 
 class SingIn extends StatefulWidget {
   const SingIn({Key? key}) : super(key: key);

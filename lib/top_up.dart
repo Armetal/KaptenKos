@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:latihan1/camera.dart';
 import 'package:latihan1/contohKosan.dart';
 import 'package:latihan1/payment.dart';
 
@@ -12,7 +13,7 @@ class TopUp extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 98, 180, 247),
         elevation: 0,
-        title: const Text("Kapten Kos"),
+        title: const Text("Top Up"),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -77,7 +78,7 @@ class TopUp extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Payment()),
+                MaterialPageRoute(builder: (context) => const CameraWidget()),
               );
             },
           ),

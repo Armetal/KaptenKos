@@ -40,20 +40,24 @@ class Search extends StatelessWidget {
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),
                         borderSide: const BorderSide(
-                            color: Color.fromARGB(255, 245, 245, 245))),
+                            color: Color.fromARGB(255, 223, 242, 255))),
                   ),
                 ),
               ),
             ),
             Card(
               child: ListTile(
-                tileColor: const Color.fromARGB(255, 186, 221, 241),
+                tileColor: const Color.fromARGB(255, 223, 242, 255),
                 title: const Text("Contoh Kosan"),
                 leading: Image.asset(
                   'assets/contoh-kosan.jpeg',
                   width: 100,
                   height: 100,
                   fit: BoxFit.fitWidth,
+                ),
+                trailing: IconButton(
+                  icon: Icon(Icons.bookmark_add),
+                  onPressed: () {},
                 ),
                 onTap: () {
                   Navigator.push(
@@ -66,13 +70,17 @@ class Search extends StatelessWidget {
             ),
             Card(
               child: ListTile(
-                tileColor: const Color.fromARGB(255, 186, 221, 241),
+                tileColor: const Color.fromARGB(255, 223, 242, 255),
                 title: const Text("Contoh Kosan"),
                 leading: Image.asset(
                   'assets/contoh-kosan.jpeg',
                   width: 100,
                   height: 100,
                   fit: BoxFit.fitWidth,
+                ),
+                trailing: IconButton(
+                  icon: Icon(Icons.bookmark_add),
+                  onPressed: () {},
                 ),
                 onTap: () {
                   Navigator.push(
@@ -85,13 +93,17 @@ class Search extends StatelessWidget {
             ),
             Card(
               child: ListTile(
-                tileColor: const Color.fromARGB(255, 186, 221, 241),
+                tileColor: const Color.fromARGB(255, 223, 242, 255),
                 title: const Text("Contoh Kosan"),
                 leading: Image.asset(
                   'assets/contoh-kosan.jpeg',
                   width: 100,
                   height: 100,
                   fit: BoxFit.fitWidth,
+                ),
+                trailing: IconButton(
+                  icon: Icon(Icons.bookmark_add),
+                  onPressed: () {},
                 ),
                 onTap: () {
                   Navigator.push(
@@ -104,13 +116,17 @@ class Search extends StatelessWidget {
             ),
             Card(
               child: ListTile(
-                tileColor: const Color.fromARGB(255, 186, 221, 241),
+                tileColor: const Color.fromARGB(255, 223, 242, 255),
                 title: const Text("Contoh Kosan"),
                 leading: Image.asset(
                   'assets/contoh-kosan.jpeg',
                   width: 100,
                   height: 100,
                   fit: BoxFit.fitWidth,
+                ),
+                trailing: IconButton(
+                  icon: Icon(Icons.bookmark_add),
+                  onPressed: () {},
                 ),
                 onTap: () {
                   Navigator.push(
@@ -128,7 +144,7 @@ class Search extends StatelessWidget {
               Icons.location_pin,
               color: Colors.white,
             ),
-            backgroundColor: Colors.red,
+            backgroundColor: Colors.blue,
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
                 return GMaps();

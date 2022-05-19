@@ -22,6 +22,7 @@ class KosAnda extends StatelessWidget {
             ),
           ),
           body: SingleChildScrollView(
+            padding: EdgeInsets.all(2),
             child: Column(
               children: [
                 Image.asset(
@@ -95,7 +96,7 @@ class KosAnda extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
-                    '''Deskiripsi Kosan''',
+                    '''Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis dui in neque pharetra sagittis. Phasellus dolor dui, imperdiet eget velit sit amet, tempus congue ipsum. Donec ac blandit nunc, vel fringilla purus. Quisque mattis massa nec libero egestas, in tempor neque hendrerit. Sed a sapien placerat, sagittis ligula nec, tincidunt mauris. Fusce sed volutpat ex. Integer semper sem nunc, non rutrum eros pulvinar sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet augue lacus. Donec varius tempor scelerisque.''',
                     textAlign: TextAlign.justify,
                   ),
                 )

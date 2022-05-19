@@ -20,6 +20,7 @@ class HomePage extends StatelessWidget {
                 height: 10,
               ),
               Card(
+                margin: EdgeInsets.all(5),
                 child: ListTile(
                   tileColor: const Color(0xffC6EAFF),
                   title: const Text("Nama Pengekos"),
@@ -37,14 +38,56 @@ class HomePage extends StatelessWidget {
                   },
                 ),
               ),
-              Column(children: [
-                Image.asset(
-                  'assets/promo.png',
-                  width: 500,
-                  height: 155,
-                  fit: BoxFit.fitWidth,
-                )
-              ]),
+              Column(
+                children: [
+                  Image.asset(
+                    'assets/promo.png',
+                    width: 500,
+                    height: 155,
+                    fit: BoxFit.fitWidth,
+                  )
+                ],
+              ),
+              Row(
+                children: [
+                  Container(
+                    margin: EdgeInsets.all(5),
+                    width: 186,
+                    height: 100,
+                    child: const Text(
+                      "E-cash \n\n Rp. 100.000,-",
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                    color: Color.fromARGB(255, 223, 242, 255),
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(5),
+                    width: 186,
+                    height: 100,
+                    child: const Text(
+                      "Coin \n\n 500 C",
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                    color: Color.fromARGB(255, 223, 242, 255),
+                  ),
+                ],
+              ),
+              Container(
+                margin: EdgeInsets.all(5),
+                width: 240,
+                height: 100,
+                child: const Text(
+                  "Tagihan",
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+                color: Color.fromARGB(255, 223, 242, 255),
+              ),
             ],
           )),
     );

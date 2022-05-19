@@ -67,7 +67,7 @@ class CameraWidgetState extends State {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Pick Image Camera"),
+        title: const Text("Camera"),
         backgroundColor: Colors.blue,
       ),
       body: Center(
@@ -82,7 +82,7 @@ class CameraWidgetState extends State {
               ),
               MaterialButton(
                 textColor: Colors.white,
-                color: Colors.pink,
+                color: Colors.blue,
                 onPressed: () {
                   _showChoiceDialog(context);
                 },
