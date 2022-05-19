@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:latihan1/change_password.dart';
+import 'package:latihan1/main.dart';
 import 'package:latihan1/menu_page.dart';
 import 'package:latihan1/profile.dart';
 import 'package:latihan1/singin.dart';
@@ -18,7 +19,7 @@ class SettingInState extends State<Setting1> {
       backgroundColor: const Color(0xffC6EAFF),
       appBar: AppBar(
         leading: BackButton(
-          color: Colors.black,
+          color: Colors.white,
           onPressed: () {
             Navigator.pop(context);
           },
@@ -29,7 +30,7 @@ class SettingInState extends State<Setting1> {
         ),
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 22, 165, 247),
-        foregroundColor: Colors.black,
+        foregroundColor: Colors.white,
       ),
       body: Center(
         child: Column(
@@ -45,40 +46,25 @@ class SettingInState extends State<Setting1> {
             const SizedBox(
               height: 10,
             ),
-            Container(
-              decoration: BoxDecoration(
-                  color: Colors.lightBlue,
-                  border: Border.all(
-                    color: Colors.black,
-                  )),
-              width: 250,
-              height: 35,
-              child: const Center(
-                child: Text(
-                  'Logout',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                ),
-              ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const MyApp();
+                }));
+              },
+              child: const Text("Logout"),
             ),
             const SizedBox(
               height: 40,
             ),
-            Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Colors.red,
-                  border: Border.all(
-                    color: Colors.black,
-                  )),
-              width: 250,
-              height: 35,
-              child: const Center(
-                child: Text(
-                  'Delete Account',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                ),
-              ),
-            )
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const MyApp();
+                }));
+              },
+              child: const Text("Delete Account"),
+            ),
           ],
         ),
       ),
