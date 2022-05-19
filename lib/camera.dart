@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 class CameraWidget extends StatefulWidget {
+  const CameraWidget({Key? key}) : super(key: key);
+
   @override
   State createState() {
     // TODO: implement createState
@@ -18,14 +20,14 @@ class CameraWidgetState extends State {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text(
+            title: const Text(
               "Choose option",
               style: TextStyle(color: Colors.blue),
             ),
             content: SingleChildScrollView(
               child: ListBody(
                 children: [
-                  Divider(
+                  const Divider(
                     height: 1,
                     color: Colors.blue,
                   ),
@@ -33,13 +35,13 @@ class CameraWidgetState extends State {
                     onTap: () {
                       _openGallery(context);
                     },
-                    title: Text("Gallery"),
-                    leading: Icon(
+                    title: const Text("Gallery"),
+                    leading: const Icon(
                       Icons.account_box,
                       color: Colors.blue,
                     ),
                   ),
-                  Divider(
+                  const Divider(
                     height: 1,
                     color: Colors.blue,
                   ),
@@ -47,8 +49,8 @@ class CameraWidgetState extends State {
                     onTap: () {
                       _openCamera(context);
                     },
-                    title: Text("Camera"),
-                    leading: Icon(
+                    title: const Text("Camera"),
+                    leading: const Icon(
                       Icons.camera,
                       color: Colors.blue,
                     ),
@@ -65,7 +67,7 @@ class CameraWidgetState extends State {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        title: Text("Pick Image Camera"),
+        title: const Text("Pick Image Camera"),
         backgroundColor: Colors.blue,
       ),
       body: Center(
