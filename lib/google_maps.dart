@@ -25,7 +25,7 @@ class GMaps extends StatelessWidget {
           mapType: MapType.normal,
           // posisi camera dengan menentukan lokasi berdasar latitude dan longitude
           initialCameraPosition: CameraPosition(
-            target: LatLng(-8.591204, 116.116208),
+            target: LatLng(-8.184486, 113.668076),
             zoom: 14.4746,
           ),
         ),
