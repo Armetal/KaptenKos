@@ -5,11 +5,20 @@ import 'package:latihan1/settings.dart';
 import 'package:latihan1/change_password.dart';
 import 'package:latihan1/top_up.dart';
 import 'package:latihan1/transaction_history.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'account_verification.dart';
 
-class Profile extends StatelessWidget {
+class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
+
+  @override
+  State<Profile> createState() => _Profile();
+}
+
+class _Profile extends State<Profile> {
+  var nama = "";
+  var nomer_hp = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +35,7 @@ class Profile extends StatelessWidget {
                   ])),
               child: SizedBox(
                 width: double.infinity,
-                height: 350.0,
+                height: 370.0,
                 child: Center(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -36,7 +45,7 @@ class Profile extends StatelessWidget {
                         backgroundImage: NetworkImage(
                           "https://media.istockphoto.com/vectors/male-face-silhouette-or-icon-man-avatar-profile-unknown-or-anonymous-vector-id1087531642?k=20&m=1087531642&s=612x612&w=0&h=D6OBNUY7ZxQTAHNVtL9mm2wbHb_dP6ogIsCCWCqiYQg=",
                         ),
-                        radius: 50.0,
+                        radius: 45.0,
                       ),
                       const SizedBox(
                         height: 10.0,
@@ -50,7 +59,20 @@ class Profile extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(
-                        height: 10.0,
+                        height: 5.0,
+                      ),
+                      FloatingActionButton(
+                        onPressed: () {},
+                        child: Icon(
+                          Icons.edit,
+                          color: Colors.white,
+                          size: 18,
+                        ),
+                        backgroundColor: Colors.blue,
+                        elevation: 0,
+                      ),
+                      const SizedBox(
+                        height: 5.0,
                       ),
                       Card(
                         margin: const EdgeInsets.symmetric(
