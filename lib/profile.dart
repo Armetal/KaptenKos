@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:latihan1/edit_profile.dart';
 import 'package:latihan1/kos_anda.dart';
 import 'package:latihan1/menu_page.dart';
 import 'package:latihan1/settings.dart';
@@ -62,7 +63,12 @@ class _Profile extends State<Profile> {
                         height: 5.0,
                       ),
                       FloatingActionButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return EditProfile();
+                          }));
+                        },
                         child: Icon(
                           Icons.edit,
                           color: Colors.white,
