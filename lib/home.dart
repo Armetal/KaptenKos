@@ -82,7 +82,7 @@ class HomePage extends StatelessWidget {
                 width: 240,
                 height: 100,
                 child: const Text(
-                  "Tagihan",
+                  "Tagihan anda Rp. 325.000,-",
                   style: TextStyle(
                     fontSize: 20,
                   ),
