@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:latihan1/menu_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-class RegisterPage extends StatelessWidget {
+class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);
 
+  @override
+  State<RegisterPage> createState() => _RegisterPage();
+}
+
+class _RegisterPage extends State<RegisterPage> {
+  var ctrlUsername = TextEditingController();
+  var ctrlPass = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,10 +58,11 @@ class RegisterPage extends StatelessWidget {
                         borderSide: BorderSide(color: Colors.black))),
               ),
             ),
-            const SizedBox(
+            SizedBox(
               width: 330,
               child: TextField(
-                decoration: InputDecoration(
+                controller: ctrlUsername,
+                decoration: const InputDecoration(
                     focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.black)),
                     filled: true,
@@ -62,10 +72,11 @@ class RegisterPage extends StatelessWidget {
                         borderSide: BorderSide(color: Colors.black))),
               ),
             ),
-            const SizedBox(
+            SizedBox(
               width: 330,
               child: TextField(
-                decoration: InputDecoration(
+                controller: ctrlPass,
+                decoration: const InputDecoration(
                     focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.black)),
                     filled: true,
@@ -114,6 +125,7 @@ class RegisterPage extends StatelessWidget {
                   width: 160,
                   child: ElevatedButton(
                       onPressed: () {
+                        do_signup();
                         Navigator.pushReplacement(context,
                             MaterialPageRoute(builder: (context) {
                           return const MenuPage();
@@ -129,5 +141,21 @@ class RegisterPage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future<void> do_signup() async {
+    try {
+      var email = ctrlUsername.text;
+      var pass = ctrlPass.text;
+      var res = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: email,
+        password: pass,
+      );
+      print('sign up success');
+      print(res);
+    } catch (ex) {
+      print('exception signup');
+      print(ex);
+    }
   }
 }

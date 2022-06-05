@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:latihan1/register_page.dart';
 import 'package:latihan1/menu_page.dart';
-import 'package:email_validator/email_validator.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 class SingIn extends StatefulWidget {
   const SingIn({Key? key}) : super(key: key);
@@ -11,6 +12,8 @@ class SingIn extends StatefulWidget {
 }
 
 class _SingInState extends State<SingIn> {
+  var ctrlUsername = TextEditingController();
+  var ctrlPassword = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +35,8 @@ class _SingInState extends State<SingIn> {
             ),
             Container(
               width: 330,
-              child: const TextField(
+              child: TextField(
+                controller: ctrlUsername,
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.black)),
@@ -45,7 +49,8 @@ class _SingInState extends State<SingIn> {
             ),
             Container(
               width: 330,
-              child: const TextField(
+              child: TextField(
+                controller: ctrlPassword,
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.black)),
@@ -82,10 +87,7 @@ class _SingInState extends State<SingIn> {
                   width: 160,
                   child: ElevatedButton(
                       onPressed: () {
-                        Navigator.pushReplacement(context,
-                            MaterialPageRoute(builder: (context) {
-                          return const MenuPage();
-                        }));
+                        _doLogin();
                       },
                       style: ElevatedButton.styleFrom(
                           primary: const Color.fromARGB(255, 0, 116, 35)),
@@ -115,5 +117,32 @@ class _SingInState extends State<SingIn> {
         ),
       ),
     );
+  }
+
+  _doLogin() async {
+    try {
+      setState(() {});
+      var email = ctrlUsername.text;
+      var pass = ctrlPassword.text;
+      print('sedang login...');
+      var res = await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: email,
+        password: pass,
+      );
+
+      print('hasil login:');
+      print(res);
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
+        return const MenuPage();
+      }));
+    } catch (ex) {
+      print('exception login');
+      print(ex.runtimeType);
+      if (ex is FirebaseAuthException) {
+        print(ex);
+        print(ex.message);
+        setState(() {});
+      }
+    }
   }
 }

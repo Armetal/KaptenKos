@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:latihan1/menu_page.dart';
 
-//belum dipake
 class Payment extends StatefulWidget {
   const Payment({Key? key}) : super(key: key);
 

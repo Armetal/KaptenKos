@@ -49,6 +49,7 @@ class Search extends StatelessWidget {
               child: ListTile(
                 tileColor: const Color.fromARGB(255, 223, 242, 255),
                 title: const Text("Contoh Kosan"),
+                subtitle: const Text("Jl.xxx No.10"),
                 leading: Image.asset(
                   'assets/contoh-kosan.jpeg',
                   width: 100,
@@ -72,6 +73,7 @@ class Search extends StatelessWidget {
               child: ListTile(
                 tileColor: const Color.fromARGB(255, 223, 242, 255),
                 title: const Text("Contoh Kosan"),
+                subtitle: const Text("Jl.xxx No.10"),
                 leading: Image.asset(
                   'assets/contoh-kosan.jpeg',
                   width: 100,
@@ -95,6 +97,7 @@ class Search extends StatelessWidget {
               child: ListTile(
                 tileColor: const Color.fromARGB(255, 223, 242, 255),
                 title: const Text("Contoh Kosan"),
+                subtitle: const Text("Jl.xxx No.10"),
                 leading: Image.asset(
                   'assets/contoh-kosan.jpeg',
                   width: 100,
@@ -118,6 +121,7 @@ class Search extends StatelessWidget {
               child: ListTile(
                 tileColor: const Color.fromARGB(255, 223, 242, 255),
                 title: const Text("Contoh Kosan"),
+                subtitle: const Text("Jl.xxx No.10"),
                 leading: Image.asset(
                   'assets/contoh-kosan.jpeg',
                   width: 100,

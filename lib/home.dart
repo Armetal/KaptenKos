@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:latihan1/menu_page.dart';
 import 'package:latihan1/profile.dart';
+import 'package:latihan1/register_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
