@@ -22,7 +22,79 @@ class Chat extends StatelessWidget {
               Card(
                 child: ListTile(
                   tileColor: const Color.fromARGB(255, 223, 242, 255),
-                  title: const Text("Bapak Kos"),
+                  title: const Text("Bapak Kos 1"),
+                  leading: Image.asset(
+                    'assets/person.png',
+                    width: 100,
+                    height: 100,
+                    fit: BoxFit.fitHeight,
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ChatView()),
+                    );
+                  },
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  tileColor: const Color.fromARGB(255, 223, 242, 255),
+                  title: const Text("Bapak Kos 2"),
+                  leading: Image.asset(
+                    'assets/person.png',
+                    width: 100,
+                    height: 100,
+                    fit: BoxFit.fitHeight,
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ChatView()),
+                    );
+                  },
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  tileColor: const Color.fromARGB(255, 223, 242, 255),
+                  title: const Text("Bapak Kos 3"),
+                  leading: Image.asset(
+                    'assets/person.png',
+                    width: 100,
+                    height: 100,
+                    fit: BoxFit.fitHeight,
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ChatView()),
+                    );
+                  },
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  tileColor: const Color.fromARGB(255, 223, 242, 255),
+                  title: const Text("Bapak Kos 4"),
+                  leading: Image.asset(
+                    'assets/person.png',
+                    width: 100,
+                    height: 100,
+                    fit: BoxFit.fitHeight,
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ChatView()),
+                    );
+                  },
+                ),
+              ),
+              Card(
+                child: ListTile(
+                  tileColor: const Color.fromARGB(255, 223, 242, 255),
+                  title: const Text("Bapak Kos 5"),
                   leading: Image.asset(
                     'assets/person.png',
                     width: 100,
