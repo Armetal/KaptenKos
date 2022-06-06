@@ -36,7 +36,7 @@ class _AccVerif extends State<AccVerif> {
                           borderSide: BorderSide(color: Colors.white)),
                       filled: true,
                       fillColor: Colors.white,
-                      hintText: 'email',
+                      hintText: 'E-Mail',
                       border: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white))),
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -61,12 +61,15 @@ class _AccVerif extends State<AccVerif> {
                           borderSide: BorderSide(color: Colors.white)),
                       filled: true,
                       fillColor: Colors.white,
-                      hintText: 'phone number',
+                      hintText: 'Phone Number',
                       border: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white))),
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
               ),
+            ),
+            SizedBox(
+              height: 10,
             ),
             SizedBox(
               child: ElevatedButton(
