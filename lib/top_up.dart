@@ -13,7 +13,7 @@ class TopUp extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 98, 180, 247),
         elevation: 0,
-        title: const Text("Top Up"),
+        title: Image.asset('assets/logo.png', fit: BoxFit.cover),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
