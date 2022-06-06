@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:latihan1/database_services.dart';
 
 class EditProfile extends StatefulWidget {
   const EditProfile({Key? key}) : super(key: key);
@@ -72,8 +74,10 @@ class _EditProfile extends State<EditProfile> {
             ),
             SizedBox(
               child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pop(context);
+                  onPressed: () async {
+                    DocumentSnapshot snapshot =
+                        await DatabaseServices.getProduct("1");
+                    print(snapshot.data);
                   },
                   style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 4, 109, 229)),
