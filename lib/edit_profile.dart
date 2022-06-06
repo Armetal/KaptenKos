@@ -11,8 +11,8 @@ class EditProfile extends StatefulWidget {
 
 class _EditProfile extends State<EditProfile> {
   @override
-  var nama = "";
-  var nomer_hp = 0;
+  var nama = ' ';
+  var nomer_hp = ' ';
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffC6EAFF),
@@ -32,10 +32,13 @@ class _EditProfile extends State<EditProfile> {
               ),
               width: 250,
               height: 35,
-              child: const Center(
+              child: Center(
                 child: TextField(
+                  onChanged: (v) {
+                    nama = v;
+                  },
                   textAlign: TextAlign.center,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white)),
                       filled: true,
@@ -57,10 +60,13 @@ class _EditProfile extends State<EditProfile> {
               ),
               width: 250,
               height: 35,
-              child: const Center(
+              child: Center(
                 child: TextField(
+                  onChanged: (v) {
+                    nomer_hp = v;
+                  },
                   textAlign: TextAlign.center,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white)),
                       filled: true,
@@ -75,9 +81,8 @@ class _EditProfile extends State<EditProfile> {
             SizedBox(
               child: ElevatedButton(
                   onPressed: () async {
-                    DocumentSnapshot snapshot =
-                        await DatabaseServices.getProduct("1");
-                    print(snapshot.data);
+                    DatabaseServices.createOrUpdateProfile("1",
+                        nama: nama, nomer_hp: nomer_hp);
                   },
                   style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 4, 109, 229)),
@@ -89,8 +94,12 @@ class _EditProfile extends State<EditProfile> {
             SizedBox(
               width: 80,
               child: ElevatedButton(
-                  onPressed: () {
+                  onPressed: () async {
                     Navigator.pop(context);
+                    DocumentSnapshot snapshot =
+                        await DatabaseServices.getProfile("1");
+                    print(snapshot['nama']);
+                    print(snapshot['nomer_hp']);
                   },
                   style: ElevatedButton.styleFrom(
                       primary: Color.fromARGB(255, 0, 187, 31)),

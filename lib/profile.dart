@@ -9,6 +9,7 @@ import 'package:latihan1/transaction_history.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'account_verification.dart';
+import 'database_services.dart';
 
 class Profile extends StatefulWidget {
   const Profile({Key? key}) : super(key: key);
@@ -18,8 +19,8 @@ class Profile extends StatefulWidget {
 }
 
 class _Profile extends State<Profile> {
-  var nama = "";
-  var nomer_hp = 0;
+  var nama = ' ';
+  var nomer_hp = ' ';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +52,7 @@ class _Profile extends State<Profile> {
                       const SizedBox(
                         height: 10.0,
                       ),
-                      const Text(
+                      Text(
                         "Nama Pengekos",
                         style: TextStyle(
                           fontSize: 25.0,
