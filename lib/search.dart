@@ -63,8 +63,7 @@ class Search extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const ContohKosan()),
+                    MaterialPageRoute(builder: (context) => ContohKosan()),
                   );
                 },
               ),
@@ -87,8 +86,7 @@ class Search extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const ContohKosan()),
+                    MaterialPageRoute(builder: (context) => ContohKosan()),
                   );
                 },
               ),
@@ -111,8 +109,7 @@ class Search extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const ContohKosan()),
+                    MaterialPageRoute(builder: (context) => ContohKosan()),
                   );
                 },
               ),
@@ -135,8 +132,7 @@ class Search extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => const ContohKosan()),
+                    MaterialPageRoute(builder: (context) => ContohKosan()),
                   );
                 },
               ),

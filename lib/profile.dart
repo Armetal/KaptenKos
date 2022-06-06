@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:latihan1/edit_profile.dart';
 import 'package:latihan1/kos_anda.dart';
+import 'package:latihan1/kritik_saran.dart';
 import 'package:latihan1/menu_page.dart';
 import 'package:latihan1/settings.dart';
 import 'package:latihan1/change_password.dart';
@@ -327,6 +328,40 @@ class _Profile extends State<Profile> {
                     alignment: Alignment.center,
                     child: const Text(
                       "Account Verification",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 26.0,
+                          fontWeight: FontWeight.w300),
+                    ),
+                  ),
+                )),
+          ),
+          SizedBox(
+            width: 300.00,
+            child: RaisedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return KritikSaran();
+                  }));
+                },
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(80.0)),
+                elevation: 0.0,
+                padding: const EdgeInsets.all(2.0),
+                child: Ink(
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                        begin: Alignment.centerRight,
+                        end: Alignment.centerLeft,
+                        colors: [Colors.blueAccent, Colors.blueAccent]),
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                  child: Container(
+                    constraints:
+                        const BoxConstraints(maxWidth: 300.0, minHeight: 50.0),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      "Kritik & Saran",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 26.0,

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:latihan1/database_services.dart';
 import 'package:latihan1/google_maps.dart';
 import 'package:latihan1/menu_page.dart';
 import 'package:latihan1/search.dart';
 
 class ContohKosan extends StatelessWidget {
-  const ContohKosan({Key? key}) : super(key: key);
+  ContohKosan({Key? key}) : super(key: key);
+  var review = '';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -99,6 +101,31 @@ class ContohKosan extends StatelessWidget {
                     '''Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis dui in neque pharetra sagittis. Phasellus dolor dui, imperdiet eget velit sit amet, tempus congue ipsum. Donec ac blandit nunc, vel fringilla purus. Quisque mattis massa nec libero egestas, in tempor neque hendrerit. Sed a sapien placerat, sagittis ligula nec, tincidunt mauris. Fusce sed volutpat ex. Integer semper sem nunc, non rutrum eros pulvinar sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet augue lacus. Donec varius tempor scelerisque.''',
                     textAlign: TextAlign.justify,
                   ),
+                ),
+                TextField(
+                  onChanged: (v) {
+                    review = v;
+                  },
+                  textAlign: TextAlign.center,
+                  decoration: const InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white)),
+                      filled: true,
+                      fillColor: Colors.white,
+                      hintText: 'tulis review kamu',
+                      border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white))),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  child: ElevatedButton(
+                      onPressed: () async {
+                        DatabaseServices3.createOrUpdateReview("1",
+                            review: review);
+                      },
+                      style: ElevatedButton.styleFrom(
+                          primary: Color.fromARGB(255, 4, 109, 229)),
+                      child: const Text("Masukkan Review")),
                 ),
                 ElevatedButton(
                   onPressed: () {
