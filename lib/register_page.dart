@@ -126,10 +126,7 @@ class _RegisterPage extends State<RegisterPage> {
                   child: ElevatedButton(
                       onPressed: () {
                         do_signup();
-                        Navigator.pushReplacement(context,
-                            MaterialPageRoute(builder: (context) {
-                          return const MenuPage();
-                        }));
+                        Navigator.pop(context);
                       },
                       style: ElevatedButton.styleFrom(
                           primary: const Color(0xff404CB2)),
