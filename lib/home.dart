@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:latihan1/menu_page.dart';
 import 'package:latihan1/profile.dart';
 import 'package:latihan1/register_page.dart';
+import 'package:latihan1/top_up.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -88,6 +89,19 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 color: Color.fromARGB(255, 223, 242, 255),
+              ),
+              SizedBox(
+                width: 160,
+                child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return const TopUp();
+                      }));
+                    },
+                    style: ElevatedButton.styleFrom(
+                        primary: const Color(0xff404CB2)),
+                    child: const Text("Bayar Tagihan")),
               ),
             ],
           )),
