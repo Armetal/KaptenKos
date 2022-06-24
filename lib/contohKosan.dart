@@ -3,6 +3,7 @@ import 'package:latihan1/database_services.dart';
 import 'package:latihan1/google_maps.dart';
 import 'package:latihan1/menu_page.dart';
 import 'package:latihan1/search.dart';
+import 'package:latihan1/chat_view.dart';
 
 class ContohKosan extends StatelessWidget {
   ContohKosan({Key? key}) : super(key: key);
@@ -85,7 +86,7 @@ class ContohKosan extends StatelessWidget {
                                 "Tersedia",
                                 style: TextStyle(
                                   fontSize: 15.0,
-                                  color: Color.fromARGB(255, 73, 170, 214),
+                                  color: Color.fromARGB(255, 96, 214, 73),
                                 ),
                               )
                             ],
@@ -139,6 +140,18 @@ class ContohKosan extends StatelessWidget {
               ],
             ),
           ),
+          floatingActionButton: FloatingActionButton(
+              child: const Icon(
+                Icons.phone,
+                color: Colors.white,
+              ),
+              backgroundColor: Colors.blue,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ChatView()),
+                );
+              }),
         ));
   }
 }
