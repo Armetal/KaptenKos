@@ -20,7 +20,7 @@ class _THistory extends State<THistory> {
           Card(
             margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
             clipBehavior: Clip.antiAlias,
-            color: Colors.white,
+            color: Color.fromARGB(255, 255, 255, 255),
             elevation: 5.0,
             child: Padding(
               padding:
@@ -33,7 +33,7 @@ class _THistory extends State<THistory> {
                         Text(
                           "Bayar Kos 1 Bulan",
                           style: TextStyle(
-                            color: Colors.blueAccent,
+                            color: Color.fromARGB(255, 73, 170, 214),
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
                           ),
@@ -42,10 +42,19 @@ class _THistory extends State<THistory> {
                           height: 5.0,
                         ),
                         Text(
-                          "10 April 2022 \n DANA",
+                          "10 Mei 2022 \n DANA",
                           style: TextStyle(
                               fontSize: 15.0,
                               color: Color.fromARGB(255, 73, 170, 214)),
+                        ),
+                        SizedBox(
+                          height: 5.0,
+                        ),
+                        Text(
+                          "Status:\n Menunggu Pembayaran",
+                          style: TextStyle(
+                              fontSize: 15.0,
+                              color: Color.fromARGB(255, 184, 181, 25)),
                         )
                       ],
                     ),
@@ -107,6 +116,15 @@ class _THistory extends State<THistory> {
                           style: TextStyle(
                               fontSize: 15.0,
                               color: Color.fromARGB(255, 73, 170, 214)),
+                        ),
+                        SizedBox(
+                          height: 5.0,
+                        ),
+                        Text(
+                          "Status:\n Pembayaran Berhasil",
+                          style: TextStyle(
+                              fontSize: 15.0,
+                              color: Color.fromARGB(255, 48, 150, 23)),
                         )
                       ],
                     ),

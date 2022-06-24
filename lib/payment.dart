@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:latihan1/menu_page.dart';
+import 'package:latihan1/top_up.dart';
 
 class Payment extends StatefulWidget {
   const Payment({Key? key}) : super(key: key);
@@ -35,6 +36,10 @@ class _PaymentState extends State<Payment> {
                     ),
                     FlatButton(
                       onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return const TopUp();
+                        }));
                         setState(() {
                           data = "SUKSES";
                         });
