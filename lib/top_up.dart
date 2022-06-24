@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:latihan1/camera.dart';
 import 'package:latihan1/contohKosan.dart';
 import 'package:latihan1/payment.dart';
+import 'package:latihan1/payment_confirmation.dart';
 
 class TopUp extends StatelessWidget {
   const TopUp({Key? key}) : super(key: key);
@@ -30,7 +31,7 @@ class TopUp extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Payment()),
+                MaterialPageRoute(builder: (context) => const PaymentConfirm()),
               );
             },
           ),
@@ -42,7 +43,7 @@ class TopUp extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Payment()),
+                MaterialPageRoute(builder: (context) => const PaymentConfirm()),
               );
             },
           ),
@@ -54,7 +55,7 @@ class TopUp extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Payment()),
+                MaterialPageRoute(builder: (context) => const PaymentConfirm()),
               );
             },
           ),
@@ -66,7 +67,7 @@ class TopUp extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Payment()),
+                MaterialPageRoute(builder: (context) => const PaymentConfirm()),
               );
             },
           ),
