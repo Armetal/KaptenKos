@@ -95,7 +95,7 @@ class _RegisterPage extends State<RegisterPage> {
                 Container(
                   margin: const EdgeInsets.only(left: 100),
                   child: const Text(
-                    'Harap Isi Data Diri Dengan Benar',
+                    'Harap Isi Data Diri Dengan Benar\n    Password Min 6 Characters',
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: Color(0xff404CB2)),
                   ),
