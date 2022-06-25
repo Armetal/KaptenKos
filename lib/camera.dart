@@ -8,7 +8,6 @@ class CameraWidget extends StatefulWidget {
 
   @override
   State createState() {
-    // TODO: implement createState
     return CameraWidgetState();
   }
 }
@@ -64,7 +63,6 @@ class CameraWidgetState extends State {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: const Text("Camera"),
@@ -87,12 +85,30 @@ class CameraWidgetState extends State {
                   _showChoiceDialog(context);
                 },
                 child: Text("Select Image"),
+              ),
+              MaterialButton(
+                textColor: Colors.white,
+                color: Color.fromARGB(255, 33, 243, 68),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text("Save"),
               )
             ],
           ),
         ),
       ),
     );
+  }
+
+  void _openCamera(BuildContext context) async {
+    final pickedFile = await ImagePicker().getImage(
+      source: ImageSource.camera,
+    );
+    setState(() {
+      imageFile = pickedFile!;
+    });
+    Navigator.pop(context);
   }
 
   void _openGallery(BuildContext context) async {
@@ -103,16 +119,6 @@ class CameraWidgetState extends State {
       imageFile = pickedFile!;
     });
 
-    Navigator.pop(context);
-  }
-
-  void _openCamera(BuildContext context) async {
-    final pickedFile = await ImagePicker().getImage(
-      source: ImageSource.camera,
-    );
-    setState(() {
-      imageFile = pickedFile!;
-    });
     Navigator.pop(context);
   }
 }
